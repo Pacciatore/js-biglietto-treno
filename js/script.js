@@ -13,19 +13,22 @@ let prezzoBiglietto;
 
 // Inizio istruzioni
 
-// Richiesta km da percorrere
-kmDaPercorrere = parseFloat(prompt('Inserire numero di kilometri che si vuole percorrere:'));
-console.log('kmDaPercorrere ' + kmDaPercorrere);
+// Richiesta km da percorrere con controllo del valore numerico
+do {
+    kmDaPercorrere = parseFloat(prompt('Inserire numero di kilometri che si vuole percorrere:'));
+    console.log('kmDaPercorrere ' + kmDaPercorrere);
+} while (isNaN(kmDaPercorrere));
 
-// Richiesta età del passegero
-etaPasseggero = parseFloat(prompt('Inserire età passeggero:'));
-console.log('etaPassegero ' + etaPasseggero);
+// Richiesta età del passegero con controllo del valore numerico
+do {
+    etaPasseggero = parseFloat(prompt('Inserire età passeggero:'));
+    console.log('etaPassegero ' + etaPasseggero);
+} while (isNaN(etaPasseggero));
 
 // Calcolo del costo del biglietto
 prezzoBiglietto = costoPerKm * kmDaPercorrere;
 console.log('prezzoBiglietto ' + prezzoBiglietto);
 
-// TODO E se viene inserito un NaN?
 
 // Se il passeggero è maggiorenne controlli se è senior ed applica gli sconti di conseguenza,
 // Altrimenti stampi il prezzo del biglietto pieno
