@@ -48,18 +48,20 @@ do {
 
     // Se il passeggero è maggiorenne controlli se è senior ed applica gli sconti di conseguenza,
     // Altrimenti stampi il prezzo del biglietto pieno
-    if (etaPasseggero >= maggioreEta) {
+    if (etaPasseggero < maggioreEta) {
 
-        if (etaPasseggero >= seniorEta) {
-            prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * scontoSenior);
-            alert('Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€, sconto per gli over 65 applicato.')
-        } else {
-            prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * scontoMaggiorenni);
-            alert('Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€, sconto per i maggiorenni applicato.')
-        }
+        prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * scontoMaggiorenni);
+        alert('Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€, sconto per i minorenni applicato.')
+
+    } else if (etaPasseggero >= seniorEta) {
+
+        prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * scontoSenior);
+        alert('Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€, sconto per gli over 65 applicato.')
 
     } else {
+
         alert('Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€, senza sconti applicati.')
+
     }
 
     // TODO vedere perché entra in loop questo controllo
