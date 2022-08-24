@@ -1,6 +1,6 @@
 // Dichiarazione costanti
 const costoPerKm = 0.21;
-const scontoMaggiorenni = 0.2;
+const scontoMinorenni = 0.2;
 const scontoSenior = 0.4;
 const maggioreEta = 18;
 const seniorEta = 65;
@@ -50,7 +50,7 @@ do {
     // Altrimenti stampi il prezzo del biglietto pieno
     if (etaPasseggero < maggioreEta) {
 
-        prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * scontoMaggiorenni);
+        prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * scontoMinorenni);
         alert('Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€, sconto per i minorenni applicato.')
 
     } else if (etaPasseggero >= seniorEta) {
