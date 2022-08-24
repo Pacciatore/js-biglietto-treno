@@ -13,16 +13,29 @@ let prezzoBiglietto;
 
 // Inizio istruzioni
 
+
 // Richiesta km da percorrere con controllo del valore numerico
 do {
     kmDaPercorrere = parseFloat(prompt('Inserire numero di kilometri che si vuole percorrere:'));
     console.log('kmDaPercorrere ' + kmDaPercorrere);
+
+    // Messaggio di errore
+    if (isNaN(kmDaPercorrere)) {
+        alert('Il valore inserito non è un valore numerico.');
+    }
+
 } while (isNaN(kmDaPercorrere));
 
 // Richiesta età del passegero con controllo del valore numerico
 do {
     etaPasseggero = parseFloat(prompt('Inserire età passeggero:'));
     console.log('etaPassegero ' + etaPasseggero);
+
+    // Messaggio di errore
+    if (isNaN(etaPasseggero)) {
+        alert('Il valore inserito non è un valore numerico.');
+    }
+
 } while (isNaN(etaPasseggero));
 
 // Calcolo del costo del biglietto
