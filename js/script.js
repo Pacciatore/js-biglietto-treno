@@ -45,22 +45,23 @@ do {
     prezzoBiglietto = costoPerKm * kmDaPercorrere;
     console.log('prezzoBiglietto ' + prezzoBiglietto);
 
+    let message = 'Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€';
 
     // Se il passeggero è maggiorenne controlli se è senior ed applica gli sconti di conseguenza,
     // Altrimenti stampi il prezzo del biglietto pieno
     if (etaPasseggero < maggioreEta) {
 
         prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * scontoMinorenni);
-        alert('Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€, sconto per i minorenni applicato.')
+        alert(message + ', sconto per i minorenni applicato.')
 
     } else if (etaPasseggero >= seniorEta) {
 
         prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * scontoSenior);
-        alert('Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€, sconto per gli over 65 applicato.')
+        alert(message + ', sconto per gli over 65 applicato.')
 
     } else {
 
-        alert('Il prezzo del biglietto è ' + prezzoBiglietto.toFixed(2) + '€, senza sconti applicati.')
+        alert(message + ', senza sconti applicati.')
 
     }
 
