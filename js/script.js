@@ -79,11 +79,11 @@ do {
 
     }
 
-    // TODO vedere perché entra in loop questo controllo
-    // do {
-    //     fineAcquisto = prompt('Terminare la fase di acquisto? (S/N)');
-    // } while (fineAcquisto != 'N' || fineAcquisto != 'No' || fineAcquisto != 'n' || fineAcquisto != 'no' || fineAcquisto != 'S' || fineAcquisto != 'Si' || fineAcquisto != 's' || fineAcquisto != 'si');
 
-    fineAcquisto = prompt('Terminare la fase di acquisto? (S/N)');
+    do {
+        fineAcquisto = prompt('Terminare la fase di acquisto? (S/N)');
+    } while (fineAcquisto != 'N' && fineAcquisto != 'No' && fineAcquisto != 'n' && fineAcquisto != 'no' && fineAcquisto != 'S' && fineAcquisto != 'Si' && fineAcquisto != 's' && fineAcquisto != 'si');
+
+    // fineAcquisto = prompt('Terminare la fase di acquisto? (S/N)');
 
 } while (fineAcquisto === 'N' || fineAcquisto === 'No' || fineAcquisto === 'n' || fineAcquisto === 'no');
